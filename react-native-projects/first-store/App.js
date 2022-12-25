@@ -1,11 +1,11 @@
 import { StyleSheet, Text, View, } from 'react-native';
 import { Icon, ListItem, Screen } from './app/components';
-import { AccountScreen, ListingDetailsScreen, MessagesScreen, ViewImageScreen, WelcomeScreen } from './app/screens/';
+import { AccountScreen, ListingDetailsScreen, ListingsScreen, MessagesScreen, ViewImageScreen, WelcomeScreen } from './app/screens/';
 
 export default function App() {
 
 	return <>
-		<AccountScreen />
+		<ListingsScreen />
 	</>
 }
 
