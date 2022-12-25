@@ -5,16 +5,17 @@ import Constants from 'expo-constants';
 const styles = StyleSheet.create({
 	screen: {
 		marginTop: Constants.statusBarHeight,
+		flex: 1,
 	}
 });
 
 
-const Screen = ({children}) => {
-  return <>
-	<SafeAreaView style={styles.screen}>
-		{children}
-	</SafeAreaView>
-  </>
+const Screen = ({ children, style }) => {
+	return <>
+		<SafeAreaView style={[styles.screen, style]}>
+			{children}
+		</SafeAreaView>
+	</>
 }
 
 export default Screen

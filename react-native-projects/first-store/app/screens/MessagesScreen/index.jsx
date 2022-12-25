@@ -1,9 +1,9 @@
-import { FlatList, View } from 'react-native'
-import React from 'react'
-import { ListItem, ListItemSeparator, Screen } from '../../components';
+import { FlatList, Text, View } from 'react-native'
+import React, { useState } from 'react'
+import { ListItem, ListItemDeleteAction, ListItemSeparator, Screen } from '../../components';
 import styles from './style';
 
-const messages = [
+const InitialMessages = [
 	{ id: 1, title: 'T1', description: 'D1', image: require('../../assets/mosh.jpg') },
 	{ id: 2, title: 'T2', description: 'D2', image: require('../../assets/mosh.jpg') },
 	{ id: 3, title: 'T3', description: 'D3', image: require('../../assets/mosh.jpg') },
@@ -13,6 +13,16 @@ const messages = [
 
 
 const MessagesScreen = () => {
+
+	const [messages, setMessages] = useState(InitialMessages);
+	const [refreshing, setRefreshing] = useState(false);
+
+	const handleDelete = message => {
+		// Delete the message from messages
+		const newMessages = messages.filter(m => m.id !== message.id);
+		setMessages(newMessages);
+	}
+
 	return <>
 		<Screen>
 			<FlatList
@@ -23,9 +33,23 @@ const MessagesScreen = () => {
 						title={item.title}
 						subTitle={item.description}
 						image={item.image}
+						renderRightActions={() => <ListItemDeleteAction
+							onPress={() => handleDelete(item)} />
+						}
 					/>
 				}
-				ItemSeparatorComponent={ <ListItemSeparator /> }
+				ItemSeparatorComponent={<ListItemSeparator />}
+				refreshing={refreshing}
+				onRefresh={() => {
+					setMessages([
+						{
+							id: 2,
+							title: "T2",
+							description: "D2",
+							image: require("../../assets/mosh.jpg"),
+						},
+					]);
+				}}
 			/>
 		</Screen>
 	</>
