@@ -1,7 +1,7 @@
-import { View, Text, Image } from 'react-native'
+import { View, Image } from 'react-native'
 import React from 'react'
 import styles from './style';
-import AppText from '../AppText/AppText';
+import AppText from '../AppText';
 
 const Card = ({ title, subtitle, image }) => {
 	return <>

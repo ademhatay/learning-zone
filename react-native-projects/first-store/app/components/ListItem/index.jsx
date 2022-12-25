@@ -1,6 +1,6 @@
 import { View, Image } from 'react-native'
 import React from 'react'
-import AppText from '../AppText/AppText'
+import AppText from '../AppText'
 import styles from './style'
 
 

@@ -4,7 +4,7 @@ import { ListingDetailsScreen, ViewImageScreen, WelcomeScreen } from './app/scre
 export default function App() {
 
 	return <>
-		<ViewImageScreen />
+		<WelcomeScreen />
 	</>
 }
 
