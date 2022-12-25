@@ -1,20 +1,7 @@
-import { Image, StyleSheet, Text, View } from 'react-native'
+import { Image, StyleSheet, View } from 'react-native'
 import React from 'react'
 import { colors } from '../config/color'
-import Ionicons from '@expo/vector-icons/Ionicons';
-const ViewImageScreen = () => {
-	return <>
-		<View style={styles.container}>
-			<Image style={styles.image} source={require('../assets/chair.jpg')} />
-			<View style={styles.closeIcon}>
-				<Ionicons name="md-checkmark-circle" size={32} color="green" />
-			</View>
-			<View style={styles.deleteIcon}></View>
-		</View>
-	</>
-}
-
-export default ViewImageScreen
+import { MaterialCommunityIcons } from '@expo/vector-icons'
 
 const styles = StyleSheet.create({
 	container: {
@@ -27,19 +14,30 @@ const styles = StyleSheet.create({
 		resizeMode: 'contain'
 	},
 	closeIcon: {
-		width: 50,
-		height: 50,
-		backgroundColor: colors.primary,
 		position: 'absolute',
 		top: 40,
 		left: 30,
 	},
 	deleteIcon: {
-		width: 50,
-		height: 50,
-		backgroundColor: colors.secondary,
 		position: 'absolute',
 		top: 40,
 		right: 30,
 	},
 })
+
+
+const ViewImageScreen = () => {
+	return <>
+		<View style={styles.container}>
+			<Image style={styles.image} source={require('../assets/chair.jpg')} />
+			<View style={styles.closeIcon}>
+				<MaterialCommunityIcons name="close" color="white" size={35} />
+			</View>
+			<View style={styles.deleteIcon}>
+				<MaterialCommunityIcons name="trash-can-outline" color="white" size={35} />
+			</View>
+		</View>
+	</>
+}
+
+export default ViewImageScreen

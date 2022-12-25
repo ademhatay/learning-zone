@@ -2,9 +2,9 @@ import { Text } from 'react-native';
 import React from 'react';
 import styles from './style';
 
-const AppText = ({ children }) => {
+const AppText = ({ children, style }) => {
 	return <>
-		<Text style={styles.text}>
+		<Text style={[styles.text, style]}>
 			{children}
 		</Text>
 	</>
