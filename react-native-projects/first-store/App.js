@@ -1,10 +1,10 @@
 import { StyleSheet, Text, View, } from 'react-native';
-import { ListingDetailsScreen, ViewImageScreen, WelcomeScreen } from './app/screens/';
+import { ListingDetailsScreen, MessagesScreen, ViewImageScreen, WelcomeScreen } from './app/screens/';
 
 export default function App() {
 
 	return <>
-		<WelcomeScreen />
+		<MessagesScreen />
 	</>
 }
 
