@@ -1,10 +1,15 @@
 import { StyleSheet, Text, View, } from 'react-native';
+import { Icon, Screen } from './app/components';
 import { ListingDetailsScreen, MessagesScreen, ViewImageScreen, WelcomeScreen } from './app/screens/';
 
 export default function App() {
 
 	return <>
-		<MessagesScreen />
+		<Screen>
+			<Icon
+				name="email"
+			/>
+		</Screen>
 	</>
 }
 
