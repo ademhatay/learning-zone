@@ -1,16 +1,13 @@
 import React, { useState } from 'react'
 import { StyleSheet, Text, View, } from 'react-native';
-import { AppTextInput, Icon, ListItem, Screen } from './app/components';
-import { AccountScreen, ListingDetailsScreen, ListingsScreen, MessagesScreen, ViewImageScreen, WelcomeScreen } from './app/screens/';
+import { AppPicker, AppTextInput, Icon, ListItem, Screen } from './app/components';
+import { AccountScreen, ListingDetailsScreen, ListingEditScreen, ListingsScreen, Login, MessagesScreen, Register, ViewImageScreen, WelcomeScreen } from './app/screens/';
 
 export default function App() {
 
-	const [text, setText] = useState('');
 
 	return <>
-		<Screen>
-			<AppTextInput icon="email" placeholder="Email" />
-		</Screen>
+		<ListingEditScreen />
 	</>
 }
 

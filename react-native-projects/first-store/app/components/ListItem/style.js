@@ -7,6 +7,7 @@ const styles = StyleSheet.create({
 		flexDirection: 'row',
 		padding: 15,
 		backgroundColor: colors.white,
+		alignItems: 'center',
 	},
 	image: {
 		width: 70,
@@ -15,6 +16,7 @@ const styles = StyleSheet.create({
 	},
 	userContainer:{
 		justifyContent: 'center',
+		flex: 1,
 		marginLeft: 10,
 	},
 	title: {
